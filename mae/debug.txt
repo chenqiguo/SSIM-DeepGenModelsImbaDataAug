@@ -1,0 +1,645 @@
+Not using distributed mode
+[22:42:07.987866] job dir: /research/nfs_martinez_158/data2/Chenqi/mae
+[22:42:07.988030] Namespace(aa='rand-m9-mstd0.5-inc1',
+accum_iter=1,
+batch_size=8,
+blr=0.001,
+clip_grad=None,
+color_jitter=None,
+cutmix=0,
+cutmix_minmax=None,
+data_path='cGAN_data/generate/Reptiles_128-011200/',
+device='cuda',
+dist_eval=False,
+dist_on_itp=False,
+dist_url='env://',
+distributed=False,
+drop_path=0.1,
+epochs=50,
+eval=True,
+finetune='',
+global_pool=True,
+input_size=224,
+layer_decay=0.75,
+local_rank=-1,
+log_dir='./output_dir',
+lr=None,
+min_lr=1e-06,
+mixup=0,
+mixup_mode='batch',
+mixup_prob=1.0,
+mixup_switch_prob=0.5,
+model='vit_huge_patch14',
+nb_classes=39,
+num_workers=10,
+output_dir='./output_dir',
+pin_mem=True,
+recount=1,
+remode='pixel',
+reprob=0.25,
+resplit=False,
+resume='checkpoint/guo.1648/experiments/15197/checkpoint-23.pth',
+seed=0,
+smoothing=0.1,
+start_epoch=0,
+warmup_epochs=5,
+weight_decay=0.05,
+world_size=1)
+[22:42:08.849130] Dataset MyImageFolder
+    Number of datapoints: 272800
+    Root location: cGAN_data/generate/Reptiles_128-011200/val
+    StandardTransform
+Transform: Compose(
+               Resize(size=256, interpolation=PIL.Image.BICUBIC)
+               CenterCrop(size=(224, 224))
+               ToTensor()
+               Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+           )
+[22:42:17.148975] Model = VisionTransformer(
+  (patch_embed): PatchEmbed(
+    (proj): Conv2d(3, 1280, kernel_size=(14, 14), stride=(14, 14))
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (12): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (13): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (14): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (15): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (16): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (17): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (18): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (19): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (20): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (21): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (22): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (23): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (24): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (25): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (26): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (27): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (28): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (29): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (30): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (31): Block(
+      (norm1): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=1280, out_features=3840, bias=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=1280, out_features=1280, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath()
+      (norm2): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=1280, out_features=5120, bias=True)
+        (act): GELU()
+        (fc2): Linear(in_features=5120, out_features=1280, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (head): Linear(in_features=1280, out_features=39, bias=True)
+  (fc_norm): LayerNorm((1280,), eps=1e-06, elementwise_affine=True)
+)
+[22:42:17.149012] number of params (M): 630.81
+[22:42:17.149022] base lr: 1.00e-03
+[22:42:17.149026] actual lr: 3.13e-05
+[22:42:17.149029] accumulate grad iterations: 1
+[22:42:17.149031] effective batch size: 8
+[22:42:17.168635] criterion = LabelSmoothingCrossEntropy()
+[22:42:20.476438] Resume checkpoint checkpoint/guo.1648/experiments/15197/checkpoint-23.pth
+[22:42:21.786535] [22:42:21.786666] [22:42:21.786694] [22:42:21.786723] [22:42:21.786742] [22:42:21.786768] [22:42:21.786795] [22:42:21.786827] [22:42:21.786582] [22:42:21.786696] [22:42:21.786729] [22:42:21.786763] [22:42:21.786789] [22:42:21.786806] [22:42:21.786829] [22:42:21.786859] [22:42:21.786486] [22:42:21.786639] [22:42:21.786683] [22:42:21.786720] [22:42:21.786752] [22:42:21.786789] [22:42:21.786829] [22:42:21.786884] [22:42:21.786707] [22:42:21.786834] [22:42:21.786870] [22:42:21.786892] [22:42:21.786916] [22:42:21.786935] [22:42:21.786953] [22:42:21.786984] [22:42:21.786982] [22:42:21.787125] [22:42:21.787167] [22:42:21.787191] [22:42:21.787210] [22:42:21.787236] [22:42:21.787254] [22:42:21.787287] [22:42:21.786945] [22:42:21.787073] [22:42:21.787119] [22:42:21.787149] [22:42:21.787187] [22:42:21.787220] [22:42:21.787251] [22:42:21.787301] [22:42:21.787161] [22:42:21.787290] [22:42:21.787319] [22:42:21.787341] [22:42:21.787362] [22:42:21.787380] [22:42:21.787399] [22:42:21.787435] [22:42:21.787173] [22:42:21.787286] [22:42:21.787313] [22:42:21.787333] [22:42:21.787357] [22:42:21.787374] [22:42:21.787391] [22:42:21.787432] [22:42:21.788070] [22:42:21.788176] [22:42:21.788201] [22:42:21.788221] [22:42:21.788240] [22:42:21.788259] [22:42:21.788278] [22:42:21.788308] [22:42:21.788087] [22:42:21.788189] [22:42:21.788211] [22:42:21.788230] [22:42:21.788248] [22:42:21.788266] [22:42:21.788284] [22:42:21.788313] [22:42:21.257398] ************************** debug1 begin:
+[22:42:21.257488] ^^^ images.shape = torch.Size([8, 3, 224, 224])
+[22:42:21.257506] ^^^ target.shape = torch.Size([8])
+[22:42:21.257514] tensor([0, 0, 0, 0, 0, 0, 0, 0])
+[22:42:21.258391] ^^^ len(img_path) = 8
+[22:42:21.258415] ['cGAN_data/generate/Reptiles_128-011200/val/163/seed0700.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0702.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0703.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0709.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0714.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0715.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0719.png', 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0722.png']
+[22:42:21.258454] ************************** debug1 end:
+[22:42:21.778788] delete img i = 0
+[22:42:21.778818] keep img i = 1
+[22:42:21.778833] prob_dict = {'cGAN_data/generate/Reptiles_128-011200/val/163/seed0702.png': 2.3515625}
+[22:42:21.778841] delete img i = 2
+[22:42:21.778849] keep img i = 3
+[22:42:21.778856] prob_dict = {'cGAN_data/generate/Reptiles_128-011200/val/163/seed0702.png': 2.3515625, 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0709.png': 3.83203125}
+[22:42:21.778863] delete img i = 4
+[22:42:21.778871] keep img i = 5
+[22:42:21.778878] prob_dict = {'cGAN_data/generate/Reptiles_128-011200/val/163/seed0702.png': 2.3515625, 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0709.png': 3.83203125, 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0715.png': 5.04296875}
+[22:42:21.778886] keep img i = 6
+[22:42:21.778894] prob_dict = {'cGAN_data/generate/Reptiles_128-011200/val/163/seed0702.png': 2.3515625, 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0709.png': 3.83203125, 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0715.png': 5.04296875, 'cGAN_data/generate/Reptiles_128-011200/val/163/seed0719.png': 2.8046875}
+[22:42:21.778903] delete img i = 7
+[22:42:21.778909] ************************** debug2 begin:
+[22:42:21.778912] ^^^ len(pred) = 8
+[22:42:21.778914] [1, 0, 11, 0, 21, 0, 0, 15]
+[22:42:21.778918] ^^^ len(these_pred_prob) = 8
+[22:42:21.778922] [3.193359375, 2.3515625, 2.77734375, 3.83203125, 3.31640625, 5.04296875, 2.8046875, 3.03125]
+[22:42:21.778928] ^^^ len(if_keep) = 8
+[22:42:21.778930] [False  True False  True False  True  True False]
+[22:42:21.779071] ************************** debug2 end:
