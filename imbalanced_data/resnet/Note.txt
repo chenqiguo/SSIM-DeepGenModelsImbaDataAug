@@ -1,0 +1,4 @@
+Using the original imbalanced dataset and the styleGAN2 generated data-aug (balanced) dataset train & val images, on only super-class or each super-class or all sub-classes, do:
+1. Classification on original imbalanced dataset with resnet18.
+2. Classification on styleGAN2 generated data-aug (balanced) dataset with resnet18. Then compared with (1) to see if it's better.
+3. ...
