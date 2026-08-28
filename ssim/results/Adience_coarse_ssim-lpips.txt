@@ -1,0 +1,9 @@
+For super-class 0, Avg ssim/lpips score: 0.901582 +/- 0.021304
+For super-class 1, Avg ssim/lpips score: 1.127108 +/- 0.067879
+For super-class 2, Avg ssim/lpips score: 1.108017 +/- 0.037266
+For super-class 3, Avg ssim/lpips score: 1.002568 +/- 0.043200
+For super-class 4, Avg ssim/lpips score: 1.018350 +/- 0.019785
+For super-class 5, Avg ssim/lpips score: 0.971698 +/- 0.026685
+For super-class 6, Avg ssim/lpips score: 1.016016 +/- 0.049121
+For super-class 7, Avg ssim/lpips score: 0.944310 +/- 0.042882
+--------- For all super-classes above, Final ssim/lpips score (the max): 1.127108--------- For all super-classes above, Final ssim/lpips score (the mean): 1.011206

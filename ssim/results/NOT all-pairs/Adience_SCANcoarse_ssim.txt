@@ -1,0 +1,9 @@
+For super-class 2, Avg ssim score: 0.103954 +/- 0.001068
+For super-class 1, Avg ssim score: 0.109983 +/- 0.000781
+For super-class 4, Avg ssim score: 0.112782 +/- 0.000855
+For super-class 3, Avg ssim score: 0.119219 +/- 0.000817
+For super-class 7, Avg ssim score: 0.113908 +/- 0.000781
+For super-class 6, Avg ssim score: 0.117177 +/- 0.000602
+For super-class 5, Avg ssim score: 0.122383 +/- 0.000945
+For super-class 0, Avg ssim score: 0.110838 +/- 0.000795
+--------- For all super-classes above, Final ssim score (the max): 0.122383

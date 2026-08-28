@@ -1,0 +1,21 @@
+For super-class 0, Avg ssim score: 0.061470 +/- 0.001536
+For super-class 1, Avg ssim score: 0.061746 +/- 0.001917
+For super-class 2, Avg ssim score: 0.043839 +/- 0.001567
+For super-class 3, Avg ssim score: 0.054199 +/- 0.001937
+For super-class 4, Avg ssim score: 0.046734 +/- 0.001814
+For super-class 5, Avg ssim score: 0.037794 +/- 0.001662
+For super-class 6, Avg ssim score: 0.050443 +/- 0.001587
+For super-class 7, Avg ssim score: 0.064616 +/- 0.001756
+For super-class 8, Avg ssim score: 0.032465 +/- 0.001385
+For super-class 9, Avg ssim score: 0.067154 +/- 0.001610
+For super-class 10, Avg ssim score: 0.115076 +/- 0.002240
+For super-class 11, Avg ssim score: 0.042691 +/- 0.001452
+For super-class 12, Avg ssim score: 0.044688 +/- 0.001424
+For super-class 13, Avg ssim score: 0.051599 +/- 0.001496
+For super-class 14, Avg ssim score: 0.036965 +/- 0.001477
+For super-class 15, Avg ssim score: 0.048739 +/- 0.001504
+For super-class 16, Avg ssim score: 0.045517 +/- 0.001538
+For super-class 17, Avg ssim score: 0.090202 +/- 0.001740
+For super-class 18, Avg ssim score: 0.043638 +/- 0.001407
+For super-class 19, Avg ssim score: 0.058158 +/- 0.001610
+--------- For all super-classes above, Final ssim score (the max): 0.115076
