@@ -303,10 +303,20 @@ Subdirectories may contain their own license and citation information.
 
 ## Paper
 
-**Structural Similarity: When to Use Deep Generative Models on Imbalanced Image Dataset Augmentation**  
-Chenqi Guo, Fabian Benitez-Quiroz, Qianli Feng, Aleix Martinez
+**[Structural Similarity: When to Use Deep Generative Models on Imbalanced Image Dataset Augmentation](https://arxiv.org/abs/2303.04854)**  
+Chenqi Guo, Fabian Benitez-Quiroz, Qianli Feng, Aleix Martinez  
 
-Citation information and a public paper link can be added here when available.
+📄 **arXiv:** [2303.04854](https://arxiv.org/abs/2303.04854)
+
+If you find this work useful, please consider citing:
+
+```bibtex
+@article{guo2023structural,
+  title={Structural Similarity: When to Use Deep Generative Models on Imbalanced Image Dataset Augmentation},
+  author={Guo, Chenqi and Benitez-Quiroz, Fabian and Feng, Qianli and Martinez, Aleix},
+  journal={arXiv preprint arXiv:2303.04854},
+  year={2023}
+}
 
 ---
 
