@@ -1,0 +1,6 @@
+For super-class 0, Avg lpips dist: 0.609266 +/- 0.001274
+For super-class 3, Avg lpips dist: 0.616557 +/- 0.000864
+For super-class 1, Avg lpips dist: 0.622621 +/- 0.001635
+For super-class 2, Avg lpips dist: 0.641413 +/- 0.001171
+--------- For all super-classes above, Final lpips dist (the min): 0.609266
+--------- For all super-classes above, Mean lpips dist (the mean): 0.622464

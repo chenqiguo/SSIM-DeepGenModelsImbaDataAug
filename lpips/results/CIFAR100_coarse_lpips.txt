@@ -1,0 +1,21 @@
+For super-class 4, Avg lpips dist: 0.696584 +/- 0.002221
+For super-class 1, Avg lpips dist: 0.662557 +/- 0.001720
+For super-class 14, Avg lpips dist: 0.611650 +/- 0.001584
+For super-class 8, Avg lpips dist: 0.621385 +/- 0.001259
+For super-class 0, Avg lpips dist: 0.619030 +/- 0.001545
+For super-class 6, Avg lpips dist: 0.631977 +/- 0.001460
+For super-class 7, Avg lpips dist: 0.679482 +/- 0.002024
+For super-class 18, Avg lpips dist: 0.609420 +/- 0.001439
+For super-class 3, Avg lpips dist: 0.640872 +/- 0.001776
+For super-class 9, Avg lpips dist: 0.590366 +/- 0.001305
+For super-class 11, Avg lpips dist: 0.616478 +/- 0.001385
+For super-class 5, Avg lpips dist: 0.620606 +/- 0.001655
+For super-class 10, Avg lpips dist: 0.631601 +/- 0.001896
+For super-class 13, Avg lpips dist: 0.676596 +/- 0.001807
+For super-class 15, Avg lpips dist: 0.645549 +/- 0.001459
+For super-class 12, Avg lpips dist: 0.631897 +/- 0.001346
+For super-class 16, Avg lpips dist: 0.650188 +/- 0.001534
+For super-class 19, Avg lpips dist: 0.629205 +/- 0.001548
+For super-class 17, Avg lpips dist: 0.577642 +/- 0.002126
+For super-class 2, Avg lpips dist: 0.700357 +/- 0.002237
+--------- For all super-classes above, Final lpips dist (the min): 0.577642--------- For all super-classes above, Mean lpips dist (the mean): 0.637172
