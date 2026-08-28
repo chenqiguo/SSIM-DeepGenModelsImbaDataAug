@@ -49,8 +49,8 @@ The final dataset score is the **largest** similarity among all super-classes:
 
 $$
 \mathrm{SSIM}_{\mathrm{supSubCls}}(\mathcal{X})
-= \max_{\mathcal{X}_k \subset \mathcal{X}}
-\left\{\mathrm{SSIM}_{\mathrm{set}}(\mathcal{X}_k)\right\}.
+= \max_{k=1,\ldots,K}
+\mathrm{SSIM}_{\mathrm{set}}(\mathcal{X}_k).
 $$
 
 A higher SSIM-supSubCls value means that at least one group of classes is highly visually similar and is therefore more difficult for both the generator and classifier to resolve correctly.
